@@ -6,8 +6,7 @@ import TopNav from './TopNav';
 const Navigation = () => {
   return (
     <>
-      <TopNav />
-     
+      <TopNav />   
       <Category />
     </>
   );
