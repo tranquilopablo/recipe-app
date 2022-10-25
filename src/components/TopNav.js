@@ -9,7 +9,7 @@ const TopNav = () => {
     <Nav>
       <Logo to={'/'}>
         <GiKnifeFork />
-        deliciousss
+        tastyFood
       </Logo>
       <Search />
     </Nav>
