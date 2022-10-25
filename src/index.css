@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background: #ffffff;
+  margin: 1% 10%;
+}
+
+
+a{
+  color: rgb(56, 56, 56);
+
+ }
+
