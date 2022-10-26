@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/splide/css';
 
 
 const Vegetarian = () => {
@@ -31,14 +32,13 @@ const Vegetarian = () => {
     <div>
       <Wrapper>
         <h3>Our Vegetarian Picks</h3>
-
         <Splide
           options={{
             perPage: 2,
             arrows: false,
             pagination: false,
             drag: 'free',
-            gap: '5rem',
+            gap: '3rem',
           }}
         >
           {veggie.map((recipe) => (
@@ -67,7 +67,6 @@ const Card = styled.div`
   overflow: hidden;
   border-radius: 32px;
   position: relative;
-  width: 30vw;
   img {
     border-radius: 32px;
     position: absolute;
