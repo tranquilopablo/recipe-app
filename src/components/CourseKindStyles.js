@@ -43,4 +43,5 @@ const Gradient = styled.div`
 `;
 
 
+
 export { Wrapper, Card , Gradient};
