@@ -4,6 +4,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/css';
 import { Wrapper, Card, Gradient } from './CourseKindStyles';
 
+
 const Popular = () => {
   const [popular, setPopular] = useState([]);
 

@@ -19,6 +19,7 @@ const Recipe = () => {
   useEffect(() => {
     fetchDetails();
   }, [params.recipeId]);
+  
   return (
     <DetailWrapper>
       <div className='highlight'>
