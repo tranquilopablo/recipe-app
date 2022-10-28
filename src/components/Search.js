@@ -3,6 +3,7 @@ import { FaSearch } from 'react-icons/fa';
 import styled from 'styled-components';
 import { useRef } from 'react';
 
+
 const Search = () => {
   const navigate = useNavigate();
   const inputRef = useRef();
@@ -33,7 +34,7 @@ const FormStyle = styled.form`
     position: relative;
     min-width: 50%;
     max-width: 70%;
-    margin: 0 0.2rem 0 auto;
+    margin: 0 0.4rem 0 auto;
   }
   input {
     border: none;

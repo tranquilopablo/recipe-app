@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Recipe = () => {
   const [details, setDetails] = useState({});
@@ -19,10 +20,15 @@ const Recipe = () => {
   useEffect(() => {
     fetchDetails();
   }, [params.recipeId]);
-  
+
   return (
-    <DetailWrapper>
-      <div className='highlight'>
+    <DetailWrapper
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="highlight">
         <h2>{details.title}</h2>
         <img src={details.image} alt="" />
       </div>
@@ -59,13 +65,13 @@ const Recipe = () => {
   );
 };
 
-const DetailWrapper = styled.div`
+const DetailWrapper = styled(motion.div)`
   margin-top: 6rem;
   margin-bottom: 5rem;
   display: flex;
   overflow-x: hidden;
   .highlight {
-    img{
+    img {
       width: 30vw;
     }
   }
@@ -97,7 +103,7 @@ const InfoWrapper = styled.div`
       line-height: 150%;
     }
     &:last-child {
-     margin-left: 5%;
+      margin-left: 5%;
     }
   }
 `;

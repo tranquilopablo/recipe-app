@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const SearchRecipe = () => {
   const [searchedRecipes, setSearchedRecipes] = useState([]);
@@ -21,7 +22,12 @@ const SearchRecipe = () => {
   }, [params.recipe]);
 
   return (
-    <Grid>
+    <Grid
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       {searchedRecipes.map((item) => {
         return (
           <Card key={item.id}>
@@ -36,7 +42,7 @@ const SearchRecipe = () => {
   );
 };
 
-const Grid = styled.div`
+const Grid = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
   grid-gap: 2rem;
