@@ -2,7 +2,7 @@ import React from 'react';
 import { GiKnifeFork } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Search from "./Search"
+import Search from './Search';
 
 const TopNav = () => {
   return (
@@ -21,6 +21,9 @@ const Nav = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
   svg {
     font-size: 2rem;
   }

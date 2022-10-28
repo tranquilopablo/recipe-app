@@ -3,20 +3,23 @@ import styled from 'styled-components';
 import { Link, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-
 const Cuisine = () => {
   const [cuisine, setCuisine] = useState([]);
   let params = useParams();
 
   const getCuisine = async (name) => {
-    const data = await fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}&number=15`
-    );
+    try {
+      const data = await fetch(
+        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}&number=15`
+      );
+      const recipes = await data.json();
+      console.log(recipes);
 
-    const recipes = await data.json();
-    console.log(recipes);
-
-    setCuisine(recipes.results);
+      setCuisine(recipes.results);
+    } catch (err) {
+      console.log(err);
+      
+    }
   };
 
   useEffect(() => {
@@ -26,11 +29,13 @@ const Cuisine = () => {
 
   return (
     <Grid
-    animate={{ opacity: 1 }}
-    initial={{ opacity: 0 }}
-    exit={{ opacity: 0 }}
-    transition={{ duration: 0.5 }}
-  >      {cuisine.map((item) => {
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      {' '}
+      {cuisine.map((item) => {
         return (
           <Card key={item.id}>
             <Link to={'/recipe/' + item.id}>

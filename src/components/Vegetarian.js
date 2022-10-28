@@ -8,18 +8,20 @@ const Vegetarian = () => {
   const [veggie, setVeggie] = useState([]);
 
   const getVeggie = async () => {
-    const check = localStorage.getItem('veggie');
-    if (check) {
-      setVeggie(JSON.parse(check));
-    } else {
-      const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`
-      );
-      const data = await api.json();
-      localStorage.setItem('veggie', JSON.stringify(data.recipes));
-
-      setVeggie(data.recipes);
-      console.log(data);
+    try {
+      const check = localStorage.getItem('veggie');
+      if (check) {
+        setVeggie(JSON.parse(check));
+      } else {
+        const api = await fetch(
+          `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`
+        );
+        const data = await api.json();
+        localStorage.setItem('veggie', JSON.stringify(data.recipes));
+        setVeggie(data.recipes);
+      }
+    } catch (err) {
+      console.log(err);
     }
   };
 
@@ -30,7 +32,7 @@ const Vegetarian = () => {
   return (
     <div>
       <Wrapper>
-        <h3>Our Vegetarian Picks</h3>
+        <h3>Vegetarian Picks</h3>
         <Splide
           options={{
             perPage: 2,
