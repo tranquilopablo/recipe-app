@@ -35,6 +35,10 @@ const FormStyle = styled.form`
     min-width: 50%;
     max-width: 70%;
     margin: 0 0.4rem 0 auto;
+    @media (max-width: 768px) {
+      min-width: 50%;
+    max-width: 950%;
+  }
   }
   input {
     border: none;

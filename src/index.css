@@ -12,7 +12,9 @@ html {
 body {
   background: #ffffff;
   margin: 1% 10%;
+ 
 }
+
 
 
 a{
@@ -20,3 +22,9 @@ a{
 
  }
 
+ @media (max-width: 1100px) {
+  body{
+    margin: 1% 3%;
+
+  }
+}

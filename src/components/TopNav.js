@@ -24,6 +24,9 @@ const Nav = styled.div`
   @media (max-width: 1100px) {
     flex-direction: column;
   }
+  @media (max-width: 768px) {
+    padding: 1rem 1rem;
+  }
   svg {
     font-size: 2rem;
   }
@@ -36,6 +39,10 @@ const Logo = styled(Link)`
   font-family: 'Lobster Two', cursive;
   display: flex;
   align-items: center;
+  @media (max-width: 1100px) {
+    margin-bottom: 1rem;
+    align-self: flex-start;
+  }
 `;
 
 export default TopNav;
