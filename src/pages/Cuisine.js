@@ -13,12 +13,9 @@ const Cuisine = () => {
         `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}&number=15`
       );
       const recipes = await data.json();
-      console.log(recipes);
-
       setCuisine(recipes.results);
     } catch (err) {
-      console.log(err);
-      
+      console.log(err);     
     }
   };
 
