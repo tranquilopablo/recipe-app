@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/css';
 import { Wrapper, Card, Gradient } from './CourseKindStyles';
+import styled from 'styled-components';
+
 
 const Popular = () => {
   const [popular, setPopular] = useState([]);
@@ -34,7 +36,7 @@ const Popular = () => {
   return (
     <div>
       <Wrapper>
-        <h3>Popular Picks</h3>
+        <H3>Popular Picks</H3>
 
         <Splide
           options={{
@@ -42,7 +44,7 @@ const Popular = () => {
             arrows: false,
             pagination: false,
             drag: 'free',
-            gap: '3rem',
+            // gap: '3rem',
           }}
         >
           {popular.map((recipe) => {
@@ -63,5 +65,10 @@ const Popular = () => {
     </div>
   );
 };
+
+const H3 = styled.h3`
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+`;
 
 export default Popular;

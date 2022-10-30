@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/css';
 import { Wrapper, Card, Gradient } from './CourseKindStyles';
+import styled from 'styled-components';
 
 const Vegetarian = () => {
   const [veggie, setVeggie] = useState([]);
@@ -32,14 +33,14 @@ const Vegetarian = () => {
   return (
     <div>
       <Wrapper>
-        <h3>Vegetarian Picks</h3>
+        <H3>Vegetarian Picks</H3>
         <Splide
           options={{
             perPage: 2,
             arrows: false,
             pagination: false,
             drag: 'free',
-            gap: '3rem',
+            // gap: '3rem',
           }}
         >
           {veggie.map((recipe) => (
@@ -58,5 +59,10 @@ const Vegetarian = () => {
     </div>
   );
 };
+
+const H3 = styled.h3`
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+`;
 
 export default Vegetarian;

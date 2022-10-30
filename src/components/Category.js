@@ -31,6 +31,9 @@ const List = styled.div`
   display: flex;
   justify-content: center;
   margin: 1rem auto;
+  @media (max-width: 480px) {
+    margin: 0 auto;
+  }
 `;
 
 const CuisineLink = styled(NavLink)`
@@ -45,6 +48,14 @@ const CuisineLink = styled(NavLink)`
   border-radius: 50%;
   cursor: pointer;
   transform: scale(0.8);
+  @media (max-width: 768px) {
+    margin: 0 0.8rem;
+    transform: scale(0.65);
+  }
+  @media (max-width: 480px) {
+    margin: 0rem;
+    transform: scale(0.60);
+  }
   h4 {
     color: white;
     font-size: 0.8rem;

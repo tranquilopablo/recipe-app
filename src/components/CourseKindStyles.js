@@ -1,7 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
   margin: 4rem 0rem;
+  @media (max-width: 768px) {
+    margin: 2rem 0rem;
+
+  }
 `;
 
 const Card = styled.div`
@@ -9,6 +13,17 @@ const Card = styled.div`
   overflow: hidden;
   border-radius: 32px;
   position: relative;
+  margin: 0 2.2rem;
+  @media (max-width: 1100px) {
+    min-height: 20rem;
+  }
+  @media (max-width: 768px) {
+    margin: 0 1rem;
+    min-height: 14rem;
+  }
+  @media (max-width: 480px) {
+    margin: 0 0.4rem;
+  }
   img {
     border-radius: 32px;
     position: absolute;
@@ -32,6 +47,9 @@ const Card = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 480px) {
+      font-size: 0.8rem;
+    }
   }
 `;
 const Gradient = styled.div`
@@ -42,6 +60,4 @@ const Gradient = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
 `;
 
-
-
-export { Wrapper, Card , Gradient};
+export { Wrapper, Card, Gradient };

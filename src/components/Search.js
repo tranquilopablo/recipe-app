@@ -3,7 +3,6 @@ import { FaSearch } from 'react-icons/fa';
 import styled from 'styled-components';
 import { useRef } from 'react';
 
-
 const Search = () => {
   const navigate = useNavigate();
   const inputRef = useRef();
@@ -12,7 +11,7 @@ const Search = () => {
     const input = inputRef.current.value;
     e.preventDefault();
     navigate('/search/' + input);
-    inputRef.current.value = ""
+    inputRef.current.value = '';
   };
 
   return (
@@ -37,8 +36,8 @@ const FormStyle = styled.form`
     margin: 0 0.4rem 0 auto;
     @media (max-width: 768px) {
       min-width: 50%;
-    max-width: 950%;
-  }
+      max-width: 950%;
+    }
   }
   input {
     border: none;
@@ -50,6 +49,11 @@ const FormStyle = styled.form`
     border-radius: 16px;
     outline: none;
     width: 100%;
+    @media (max-width: 480px) {
+      font-size: 1.1rem;
+      padding: 0.5rem 0rem 0.5rem 2.2rem;
+
+    }
   }
   svg {
     position: absolute;
@@ -57,6 +61,9 @@ const FormStyle = styled.form`
     left: 2%;
     transform: translate(0%, -50%);
     color: white;
+    @media (max-width: 480px) {
+      transform: translate(0%, -50%) scale(0.7);
+    }
   }
   button {
     align-self: center;
@@ -67,6 +74,10 @@ const FormStyle = styled.form`
     cursor: pointer;
     border-radius: 16px;
     transition: 0.3s;
+    @media (max-width: 480px) {
+      padding: 0.4rem 0.7rem;
+
+    }
     :hover {
       background-color: rgb(222, 222, 222);
     }
