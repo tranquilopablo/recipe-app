@@ -30,6 +30,7 @@ const Category = () => {
 const List = styled.div`
   display: flex;
   justify-content: center;
+  justify-content: stretch;
   margin: 1rem auto;
   @media (max-width: 480px) {
     margin: 0 auto;
@@ -54,7 +55,9 @@ const CuisineLink = styled(NavLink)`
   }
   @media (max-width: 480px) {
     margin: 0rem;
-    transform: scale(0.60);
+    transform: scale(0.7);
+    width: 5.4rem;
+    height: 5.4rem;
   }
   h4 {
     color: white;
