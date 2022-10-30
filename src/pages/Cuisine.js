@@ -31,7 +31,6 @@ const Cuisine = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      {' '}
       {cuisine.map((item) => {
         return (
           <Card key={item.id}>

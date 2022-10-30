@@ -73,9 +73,26 @@ const DetailWrapper = styled(motion.div)`
   margin-bottom: 5rem;
   display: flex;
   overflow-x: hidden;
+  justify-content: center;
+  @media (max-width: 992px) {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin: 3rem auto 3rem auto;
+    flex-direction: column;
+  }
+  @media (max-width: 480px) {
+    align-items: center;
+;
+  }
   .highlight {
+    @media (max-width: 992px) {
+      margin-bottom: 3rem;
+    }
     img {
       width: 30vw;
+      @media (max-width: 992px) {
+        width: 90vw;
+      }
     }
   }
   .active {
@@ -84,14 +101,24 @@ const DetailWrapper = styled(motion.div)`
   }
   h2 {
     margin-bottom: 2rem;
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
   }
 
   ul {
     margin-top: 3rem;
+    @media (max-width: 992px) {
+      margin-left: 3rem;
+    }
   }
   li {
     font-size: 1rem;
     line-height: 2.5rem;
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
   }
 `;
 
@@ -99,9 +126,18 @@ const InfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 7rem;
+  @media (max-width: 992px) {
+    margin-left: 0rem;
+  }
+  @media (max-width: 480px) {
+    padding: 0 0.4rem;
+  }
   h3 {
     font-size: 1rem;
     margin-bottom: 2rem;
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
     &:first-child {
       line-height: 150%;
     }
@@ -125,6 +161,9 @@ const Button = styled.button`
   margin-right: 2rem;
   font-weight: 600;
   cursor: pointer;
+  @media (max-width: 480px) {
+    padding: 0.7rem 1rem;
+  }
 `;
 
 export default Recipe;
