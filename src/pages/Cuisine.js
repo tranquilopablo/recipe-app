@@ -15,7 +15,7 @@ const Cuisine = () => {
       const recipes = await data.json();
       setCuisine(recipes.results);
     } catch (err) {
-      console.log(err);     
+      console.log(err);
     }
   };
 
@@ -49,6 +49,10 @@ const Grid = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 2rem;
+  margin: 4rem 0rem;
+  @media (max-width: 768px) {
+    margin: 2rem 0rem;
+  }
 `;
 
 const Card = styled.div`
