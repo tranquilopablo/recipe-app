@@ -1,6 +1,7 @@
 # Introduction to tastyFood app
 
 ## Demo
+The API has a daily limit, so there is a possibility that once it is used, there is need to wait until the next day to use the app. Although, when writing the project, I saved some of the data in localStorage, but during deployment I eventually abandoned this. 
 
 [Live demo](https://recipe-app-2dfe0.web.app/)
 
