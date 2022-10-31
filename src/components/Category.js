@@ -30,7 +30,6 @@ const Category = () => {
 const List = styled.div`
   display: flex;
   justify-content: center;
-  justify-content: stretch;
   margin: 1rem auto;
   @media (max-width: 480px) {
     margin: 0 auto;
