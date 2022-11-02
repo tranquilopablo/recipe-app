@@ -73,7 +73,8 @@ const DetailWrapper = styled(motion.div)`
   margin-bottom: 5rem;
   display: flex;
   overflow-x: hidden;
-  justify-content: center;
+  min-height: 110vh;
+  /* justify-content: center; */
   @media (max-width: 992px) {
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -82,7 +83,6 @@ const DetailWrapper = styled(motion.div)`
   }
   @media (max-width: 480px) {
     align-items: center;
-;
   }
   .highlight {
     @media (max-width: 992px) {
