@@ -74,7 +74,6 @@ const DetailWrapper = styled(motion.div)`
   display: flex;
   overflow-x: hidden;
   min-height: 110vh;
-  /* justify-content: center; */
   @media (max-width: 992px) {
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -106,7 +105,6 @@ const DetailWrapper = styled(motion.div)`
       margin-bottom: 1rem;
     }
   }
-
   ul {
     margin-top: 3rem;
     @media (max-width: 992px) {
@@ -149,8 +147,6 @@ const InfoWrapper = styled.div`
 const Info = styled.div`
   display: flex;
   margin-bottom: 2rem;
-  /* justify-content: center; */
-  /* align-items: flex-start; */
 `;
 
 const Button = styled.button`
